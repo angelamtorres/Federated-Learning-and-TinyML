@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-xiao-esp32-c3", "id": "esp", "top": 29.37, "left": -34.22, "attrs": {} },
+    { "type": "wokwi-junction", "id": "j1", "top": 148.8, "left": 24, "attrs": {} },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "imu1",
+      "top": 50.98,
+      "left": 79.72,
+      "rotate": 270,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "imu1:VCC", "esp:5V", "red", [ "v0" ] ],
+    [ "imu1:GND", "esp:GND", "black", [ "v0" ] ],
+    [ "imu1:SDA", "esp:D4", "gold", [ "h-38.4", "v57.52", "h-105.6", "v-48" ] ],
+    [ "imu1:SCL", "esp:D5", "green", [ "h-19.2", "v76.72", "h-96", "v-48" ] ]
+  ],
+  "dependencies": {}
+}
